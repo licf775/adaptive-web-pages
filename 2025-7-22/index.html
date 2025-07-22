@@ -1,0 +1,128 @@
+<!-- 表单 
+     元素
+        select optgroup option fieldset legend table textarea input--button、text、radio、checkbox 
+     属性
+        required placeholder readonly pattern
+-->
+
+<!-- 实体符号 -->
+
+<!-- 网站图标添加--两种方法,使用默认引入即可，知晓外部引入方式 -->
+
+<!-- 样式选择器*9 优先级 -->
+
+<!-- 
+    块、行内、行内块
+    宽高有效否？占一行否？内置什么元素？
+-->
+
+<!-- ! label标签for属性--为了关联表单元素id 方便选中，select元素不需要 -->
+
+<!-- ! 表单元素name属性确定数据名称，value属性确定属性值 -->
+
+<!-- ! radio元素value属性需要给值，否则是on，text类型自动获取value值 -->
+
+<!-- ! 背景范围 background-clip  border-box padding-box content-box 默认border-box -->
+
+<!-- ! 宽高设置位置 box-sizing content-box  border-box -->
+<!-- 传统父级元素为块级元素的情况下，子元素的宽、高、padding、margin会变奇怪 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>form elements</title>
+</head>
+
+<body>
+    <h2>form elements</h2>
+    <form action="#name">
+        <fieldset>
+            <legend>Personal attributes</legend>
+            <label for="name"> Name: </label><input type="text" id="name" name="name">
+            <hr>
+            <label> Gender: </label>
+            <label for="female-radio"> Female </label><input type="radio" name="gender" id="female-radio"
+                value="female">
+            <label for="male-radio"> Male </label><input type="radio" name="gender" id="male-radio" value="male"
+                checked>
+            <hr>
+            <label for="sports"> Sports: </label>
+            <input type="checkbox" name="sports" id="football-checkbox" value="football">
+            <label for="football-checkbox">football</label>
+            <input type="checkbox" name="sports" id="basketball-checkbox" value="basketball">
+            <label for="basketball-checkbox">basketball</label>
+            <input type="checkbox" name="sports" id="hiking-checkbox" value="hiking">
+            <label for="hiking-checkbox">hiking</label>
+            <hr>
+            <label for="location"> Location: </label>
+            <select name="location" id="location">
+                <option value="Guangzhou">Guangzhou</option>
+                <option value="Shenzhen">Shenzhen</option>
+                <option value="Zhanjiang">Zhanjiang</option>
+                <option value="Yangjiang">Yangjiang</option>
+            </select>
+            <hr>
+            <label for="address"> Address: </label>
+            <select name="address" id="address" required>
+                <option value="" disabled selected hidden>请选择所在街道</option>
+                <optgroup label="Yuexiu">
+                    <option value="street1">street1</option>
+                    <option value="street2">street2</option>
+                    <option value="street3">street3</option>
+                </optgroup>
+                <optgroup label="Tianhe">
+                    <option value="street4">street4</option>
+                    <option value="street5">street5</option>
+                    <option value="street6">street6</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Social attributes</legend>
+            <label for="partyMember">Party Member:</label>
+            <label for="yes-radio"> Yes </label><input type="radio" name="partyMember" id="yes-radio" value="yes">
+            <label for="no-radio"> No </label><input type="radio" name="partyMember" id="no-radio" value="no" required>
+        </fieldset>
+        <fieldset>
+            <legend>Something else</legend>
+            <label for="description">Personal description:</label>
+            <textarea name="personal-description" id="description" cols="18" rows="4"></textarea>
+        </fieldset>
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+    </form>
+    <h2>table element</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>title 1</th>
+                <th>title 2</th>
+                <th>title 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>row 1 col 1</td>
+                <td>row 1 col 2</td>
+                <td>row 1 col 3</td>
+            </tr>
+            <tr>
+                <td>row 2 col 1</td>
+                <td>row 2 col 2</td>
+                <td>row 2 col 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <div></div>
+</body>
+<style>
+    table th,
+    table td {
+        padding: 10px 20px;
+    }
+</style>
+
+</html>
